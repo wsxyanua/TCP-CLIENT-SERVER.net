@@ -1,0 +1,14 @@
+D:\TcpClientServerSolution\TcpClient\bin\Debug\net9.0\TcpClient.exe
+D:\TcpClientServerSolution\TcpClient\bin\Debug\net9.0\TcpClient.deps.json
+D:\TcpClientServerSolution\TcpClient\bin\Debug\net9.0\TcpClient.runtimeconfig.json
+D:\TcpClientServerSolution\TcpClient\bin\Debug\net9.0\TcpClient.dll
+D:\TcpClientServerSolution\TcpClient\bin\Debug\net9.0\TcpClient.pdb
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.GeneratedMSBuildEditorConfig.editorconfig
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.AssemblyInfoInputs.cache
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.AssemblyInfo.cs
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.csproj.CoreCompileInputs.cache
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.dll
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\refint\TcpClient.dll
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.pdb
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\TcpClient.genruntimeconfig.cache
+D:\TcpClientServerSolution\TcpClient\obj\Debug\net9.0\ref\TcpClient.dll

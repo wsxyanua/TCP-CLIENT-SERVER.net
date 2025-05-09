@@ -1,0 +1,293 @@
+/* Base styles */
+:root {
+    --primary-color: #3498db;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --warning-color: #f1c40f;
+    --border-radius: 12px;
+    --transition-speed: 0.3s;
+}
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    transition: background-color var(--transition-speed);
+}
+
+/* Light mode styles */
+body {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #2c3e50;
+}
+
+main {
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-speed) ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    border-radius: var(--border-radius) var(--border-radius) 0 0 !important;
+    padding: 1.25rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    transition: all var(--transition-speed) ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-outline-danger {
+    color: var(--danger-color);
+    border: 2px solid var(--danger-color);
+    background: transparent;
+}
+
+.btn-outline-danger:hover {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* Table styles */
+.table {
+    margin-bottom: 0;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.table th {
+    font-weight: 600;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.02);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.table tbody tr:hover {
+    background: rgba(0, 0, 0, 0.02);
+}
+
+/* Badge styles */
+.badge {
+    padding: 0.5em 1em;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Dark mode styles */
+[data-bs-theme="dark"] {
+    color-scheme: dark;
+    --bs-body-bg: #000000;
+    --bs-body-color: #ffffff;
+    --bs-border-color: #333333;
+}
+
+[data-bs-theme="dark"] body {
+    background: #000000;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] main {
+    background: #000000;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .card {
+    background: rgba(18, 18, 18, 0.9);
+    border: 1px solid #333333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .card:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+[data-bs-theme="dark"] .card-header {
+    background: rgba(18, 18, 18, 0.95);
+    border-bottom: 1px solid #333333;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .table {
+    background: rgba(18, 18, 18, 0.9);
+    color: #ffffff;
+    border-color: #333333;
+}
+
+[data-bs-theme="dark"] .table th {
+    background: rgba(18, 18, 18, 0.95);
+    color: #ffffff;
+    border-bottom: 2px solid #333333;
+}
+
+[data-bs-theme="dark"] .table td {
+    border-bottom: 1px solid #333333;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Server Status Card */
+[data-bs-theme="dark"] .card.server-status {
+    background: rgba(18, 18, 18, 0.9);
+    border-left: 4px solid var(--primary-color);
+}
+
+[data-bs-theme="dark"] .card.server-status .card-header {
+    color: var(--primary-color);
+}
+
+/* Server Stats Card */
+[data-bs-theme="dark"] .card.server-stats {
+    background: rgba(18, 18, 18, 0.9);
+    border-left: 4px solid var(--success-color);
+}
+
+[data-bs-theme="dark"] .card.server-stats .card-header {
+    color: var(--success-color);
+}
+
+/* System Info Card */
+[data-bs-theme="dark"] .card.system-info {
+    background: rgba(18, 18, 18, 0.9);
+    border-left: 4px solid var(--danger-color);
+}
+
+[data-bs-theme="dark"] .card.system-info .card-header {
+    color: var(--danger-color);
+}
+
+/* Form elements */
+[data-bs-theme="dark"] .form-control {
+    background: rgba(18, 18, 18, 0.9);
+    border-color: #333333;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+    background: rgba(18, 18, 18, 0.95);
+    border-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Connected Clients Table */
+[data-bs-theme="dark"] .connected-clients {
+    background: rgba(18, 18, 18, 0.9);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    border: 1px solid #333333;
+}
+
+[data-bs-theme="dark"] .connected-clients th {
+    background: rgba(18, 18, 18, 0.95);
+    color: var(--primary-color);
+    font-weight: bold;
+    padding: 15px;
+    border-bottom: 2px solid #333333;
+}
+
+[data-bs-theme="dark"] .connected-clients td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #333333;
+    color: #ffffff;
+}
+
+[data-bs-theme="dark"] .connected-clients tr:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .table th, .table td {
+        padding: 0.75rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}
