@@ -1,4 +1,4 @@
-﻿using System.Net.Sockets;
+using System.Net.Sockets;
 using System.Text;
 using System.Diagnostics;
 using System.Linq;
@@ -20,7 +20,7 @@ class Program
     private static readonly Encoding _encoding = Encoding.UTF8;
 
     static async Task Main(string[] args)
-    {
+    ccccddddd
         Console.OutputEncoding = Encoding.UTF8;
         Console.Title = "TCP Time Client";
 
@@ -281,19 +281,24 @@ class Program
     {
         try
         {
+            PrintInfo("Enter your messages. Type 'exit' to stop sending messages.");
+            PrintInfo("Each message will be sent immediately to the server.");
+            PrintSeparator();
+
             while (true)
             {
-                Console.Write("\nEnter your message (or 'exit' to return to main menu): ");
+                Console.Write("\nEnter message: ");
                 var message = Console.ReadLine()?.Trim();
 
                 if (string.IsNullOrEmpty(message))
                 {
-                    PrintError("Message cannot be empty.");
+                    PrintWarning("Message cannot be empty. Please try again.");
                     continue;
                 }
 
                 if (message.ToLower() == "exit")
                 {
+                    PrintInfo("Stopping message input...");
                     break;
                 }
 
@@ -304,13 +309,6 @@ class Program
                 var bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
                 var response = _encoding.GetString(buffer, 0, bytesRead);
                 PrintSuccess($"Server response: {response}");
-
-                Console.Write("\nDo you want to send another message? (y/n): ");
-                var continueSending = Console.ReadLine()?.ToLower().Trim();
-                if (continueSending != "y" && continueSending != "yes")
-                {
-                    break;
-                }
             }
         }
         catch (Exception ex)
