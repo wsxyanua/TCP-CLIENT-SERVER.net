@@ -1,4 +1,4 @@
-﻿@page
+@page
 @model IndexModel
 @using TcpServer.Extensions
 @{
@@ -322,9 +322,9 @@
             scrollToBottom();
         };
 
-        // Auto-refresh the page every 5 seconds
+        // tự động refersh trang sau 10 
         setTimeout(function() {
             window.location.reload();
-        }, 5000);
+        }, 10000);
     </script>
 }
