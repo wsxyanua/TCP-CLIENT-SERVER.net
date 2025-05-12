@@ -48,7 +48,7 @@ public class TcpTimeService : BackgroundService, IDisposable
         _logs = new Queue<ServerLog>();
     }
 
-    private void AddLog(string message, string logLevel, string clientId = null, string clientName = null)
+    private void AddLog(string message, string logLevel, string? clientId = null, string? clientName = null)
     {
         lock (_logLock)
         {
@@ -57,8 +57,8 @@ public class TcpTimeService : BackgroundService, IDisposable
                 Timestamp = DateTime.Now,
                 Message = message,
                 LogLevel = logLevel,
-                ClientId = clientId,
-                ClientName = clientName
+                ClientId = clientId ?? "System",
+                ClientName = clientName ?? "System"
             };
 
             _logs.Enqueue(log);
