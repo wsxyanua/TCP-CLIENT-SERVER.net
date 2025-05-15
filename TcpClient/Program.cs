@@ -20,6 +20,7 @@ class Program
     private static readonly Encoding _encoding = Encoding.UTF8;
 
     static async Task Main(string[] args)
+    {
         Console.OutputEncoding = Encoding.UTF8;
         Console.Title = "TCP Time Client";
 
@@ -280,24 +281,19 @@ class Program
     {
         try
         {
-            PrintInfo("Enter your messages. Type 'exit' to stop sending messages.");
-            PrintInfo("Each message will be sent immediately to the server.");
-            PrintSeparator();
-
             while (true)
             {
-                Console.Write("\nEnter message: ");
+                Console.Write("\nEnter your message (or 'exit' to return to main menu): ");
                 var message = Console.ReadLine()?.Trim();
 
                 if (string.IsNullOrEmpty(message))
                 {
-                    PrintWarning("Message cannot be empty. Please try again.");
+                    PrintError("Message cannot be empty.");
                     continue;
                 }
 
                 if (message.ToLower() == "exit")
                 {
-                    PrintInfo("Stopping message input...");
                     break;
                 }
 
