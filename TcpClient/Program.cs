@@ -20,7 +20,6 @@ class Program
     private static readonly Encoding _encoding = Encoding.UTF8;
 
     static async Task Main(string[] args)
-    ccccddddd
         Console.OutputEncoding = Encoding.UTF8;
         Console.Title = "TCP Time Client";
 
